@@ -1,0 +1,14 @@
+# IDEs
+.vs/
+.idea/
+
+# Build results
+**/bin/
+**/obj/
+
+# User files
+*.user
+*.suo
+
+# Backup
+backup/
