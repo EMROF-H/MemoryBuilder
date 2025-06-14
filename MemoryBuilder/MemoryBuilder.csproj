@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<!--MemoryBuilder-->
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
@@ -10,13 +10,18 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\MemoryBuilder.Attributes\MemoryBuilder.Attributes.csproj" />
-      <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj" />
+    <ItemGroup Condition="'$(UsePackageReference)' == 'true'">
+        <PackageReference Include="MemoryBuilder.Attributes" Version="$(Version)" />
+        <PackageReference Include="MemoryBuilder.Generator" Version="$(Version)" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(UsePackageReference)' != 'true'">
+        <ProjectReference Include="..\MemoryBuilder.Attributes\MemoryBuilder.Attributes.csproj" />
+        <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj" ReferenceOutputAssembly="false" />
     </ItemGroup>
 
     <PropertyGroup> <!-- Open Source -->
-        <Version>1.0.2</Version>
+        <Version>1.0.4</Version>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/EMROF-H/MemoryBuilder</PackageProjectUrl>
         <RepositoryUrl>https://github.com/EMROF-H/MemoryBuilder</RepositoryUrl>

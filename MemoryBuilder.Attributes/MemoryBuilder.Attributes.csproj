@@ -1,8 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<!--MemoryBuilder.Attributes-->
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>latest</LangVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
+    <PropertyGroup> <!-- Open Source -->
+        <PackageId>MemoryBuilder.Attributes</PackageId>
+        <Version>1.0.4</Version>
+        <Authors>EMROF-H</Authors>
+        <Description>Attribute definitions for MemoryBuilder source generator.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/EMROF-H/MemoryBuilder</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/EMROF-H/MemoryBuilder</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
 </Project>

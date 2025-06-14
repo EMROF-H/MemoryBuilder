@@ -5,6 +5,7 @@
 # Build results
 **/bin/
 **/obj/
+*.nupkg
 
 # User files
 *.user

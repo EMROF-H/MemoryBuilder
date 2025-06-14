@@ -1,11 +1,10 @@
+<!--MemoryBuilder.Tests-->
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <LangVersion>latest</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
     </PropertyGroup>
@@ -25,13 +24,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj"
-                        OutputItemType="Analyzer" />
+      <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj" />
       <ProjectReference Include="..\MemoryBuilder\MemoryBuilder.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="TestCases\LinkedList\" />
     </ItemGroup>
-
 </Project>
