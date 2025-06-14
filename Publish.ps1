@@ -67,14 +67,14 @@ if ($isRemotePublish) {
         exit 1
     }
 
-    $tagExists = git tag --list "v$Version"
+    $tagExists = git tag --list "V$Version"
     if ($tagExists) {
-        Write-Error "❌ Tag v$Version already exists."
+        Write-Error "❌ Tag V$Version already exists."
         exit 1
     }
 
-    git tag "v$Version"
-    git push origin "v$Version"
+    git tag "V$Version"
+    git push origin "V$Version"
     ThrowIfFailed "Failed to push git tag."
 
     Write-Host "`n📆 Building and packing for release..."
