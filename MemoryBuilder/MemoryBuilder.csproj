@@ -7,4 +7,9 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MemoryBuilder.Attributes\MemoryBuilder.Attributes.csproj" />
+      <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj" />
+    </ItemGroup>
+
 </Project>
