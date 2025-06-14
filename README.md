@@ -2,11 +2,11 @@
 
 MemoryBuilder is a powerful source generator and attribute-based library designed to simplify external process memory modeling and access in C#.
 
-With just a simple [MemoryTarget("TypeName")] annotation on your struct, MemoryBuilder generates safe, strongly-typed classes that mirror unmanaged memory structures. This is particularly useful for reverse engineering, game memory inspection, or building overlays.
+With just a simple `[MemoryTarget("TypeName")]` annotation on your struct, MemoryBuilder generates safe, strongly-typed classes that mirror unmanaged memory structures. This is particularly useful for reverse engineering, game memory inspection, or building overlays.
 
 ## Features
 
-* 🧠 Attribute-driven memory modeling using [MemoryTarget]
+* 🧠 Attribute-driven memory modeling using `[MemoryTarget]`
 
 * ⚡ Source generator for generating .g.cs memory access classes at compile-time
 
