@@ -1,9 +1,12 @@
-﻿namespace MemoryBuilder;
+﻿using System.Runtime.InteropServices;
+
+namespace MemoryBuilder;
 
 /// <summary>
 /// Represents a typed pointer to a value of type <typeparamref name="T"/> in the memory of an external process.
 /// </summary>
 /// <typeparam name="T">An unmanaged type that this pointer refers to.</typeparam>
+[StructLayout(LayoutKind.Sequential)]
 public readonly partial struct Pointer<T>(Pointer pointer) where T : unmanaged
 {
     private readonly Pointer pointer = pointer;
