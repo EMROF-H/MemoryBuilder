@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -13,8 +15,8 @@
       <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj" />
     </ItemGroup>
 
-    <PropertyGroup>
-        <Version>1.0.1</Version>
+    <PropertyGroup> <!-- Open Source -->
+        <Version>1.0.2</Version>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/EMROF-H/MemoryBuilder</PackageProjectUrl>
         <RepositoryUrl>https://github.com/EMROF-H/MemoryBuilder</RepositoryUrl>
