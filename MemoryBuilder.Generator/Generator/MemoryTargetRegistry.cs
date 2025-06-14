@@ -36,7 +36,6 @@ internal class MemoryTargetRegistry
             var attr = symbol.GetAttribute(memoryTargetAttr);
             if (attr is null)
             {
-                MemoryDiagnostics.Report(context, structSyntax, MemoryDiagnostics.AttributeNotResolved, symbol.Name);
                 continue;
             }
 
