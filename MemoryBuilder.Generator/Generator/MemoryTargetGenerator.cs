@@ -144,9 +144,9 @@ public class MemoryTargetGenerator : ISourceGenerator
 
             // Otherwise treat as raw unmanaged value
             var innerType = inner.ToDisplayString();
-            var readExpr = $"self.{name}.Read(handle, out var {name})";
+            var readExpr = $"self.{name}.TryRead(handle, out var {name})";
             readLogic = isNullable
-                ? $"var {name} = self.{name}.Read(handle, out var _{name}) ? _{name} : null;"
+                ? $"var {name} = self.{name}.TryRead(handle, out var _{name}) ? _{name} : null;"
                 : $"if (!{readExpr}) return null;";
             return isNullable ? $"{innerType}?" : innerType;
         }
