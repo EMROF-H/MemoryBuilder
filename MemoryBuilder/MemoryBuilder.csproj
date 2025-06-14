@@ -13,4 +13,11 @@
       <ProjectReference Include="..\MemoryBuilder.Generator\MemoryBuilder.Generator.csproj" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <Version>1.0.1</Version>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/EMROF-H/MemoryBuilder</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/EMROF-H/MemoryBuilder</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
 </Project>
