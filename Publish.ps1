@@ -61,7 +61,12 @@ if ($isRemotePublish) {
     }
 
     $localHash = (& git rev-parse HEAD).Trim()
-    $remoteHash = (& git rev-parse "@{u}").Trim()
+    $remoteRaw = & git rev-parse "@{u}" 2>$null
+    if (-not $remoteRaw) {
+        Write-Error "❌ Current branch has no upstream set. Use 'git push -u origin <branch>' first."
+        exit 1
+    }
+    $remoteHash = $remoteRaw.Trim()
     if ($localHash -ne $remoteHash) {
         Write-Error "❌ Local and remote branches are not in sync."
         exit 1
